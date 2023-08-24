@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links-->
+    <link rel="icon" href="./src/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!--js-->
+    <script defer src="./src/js/script.js"></script>
+    <title>Pokedex</title>
+    
+</head>
+<body>
+    
+    <header>
+        <a href="https://github.com/RiquelmiDev">
+        <img src="./src/images/pokemon.png" alt="pokemonlogo" class="pokemonlogo">
+    </a>
+    </header>
+
+    <!--Video de fundo do pikachu-->
+
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="src/videos/pikachuther.mp4" type="video/mp4">
+        </video>
+        
+    </div>
+    
+    <main>
+
+        <img src="" alt="Pokemon" class="pokemonimagem">
+
+        <h1 class="pokemondata">
+            <span class="pokemonnunber"></span>-
+            <span class="pokemonname"></span>
+        </h1>
+
+        <form class="form">
+            <input type="search" class="inputsearch" placeholder="Nome ou Numero" required>
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">
+              &lt; Anterior </button>
+            <button class="button btn-next">Proximo &gt;</button>
+        </div>
+        <img src="src/images/pokedex.png" alt="Pokedex" class="pokedex">
+
+    </main>
+    
+</body>
+</html>

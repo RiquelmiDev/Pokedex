@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+
+}
+
+body {
+    background-image: url(../images/pikachu.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+    /*background: linear-gradient(to bottom, #07ADC3, #F0CBDB);
+    min-height: 100vh;*/
+}
+
+main {
+    display: inline-block;
+    margin-top: 3%;
+    padding: 15px;
+    position: relative;
+    animation: opacity 1s;
+}
+@keyframes opacity {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 425px;
+}
+
+.pokemonimagem {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    width: 18%;
+}
+
+.pokemondata {
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemonname {
+    color: #3a444d;
+    text-transform: capitalize;
+
+}
+
+.form {
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+
+.inputsearch {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+
+.buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+
+}
+header{
+    animation-duration: 3s;
+    animation-name: slidein;
+    display: inline-block;
+    padding: 1px;
+}
+    
+.pokemonlogo{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-around;
+    animation: go-back 1s;
+    
+}
+
+@keyframes go-back {
+    from {
+      transform: translateX(200%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  } 
+  
+  
+/*
+.button:active (deixa o botao ativo ao passar o mouse por cima*/ 
+.button:active {
+  box-shadow: inset -4px 4px 0 #222; 
+  font-size: 0.9rem; 
+}
+
+
+/*                  OBSERVACOES:
+-  % ao inves de px faz com que o obj diminua junto com a pagina 
+-  position: absolute; ( faz com que a posicao permaneca a mesma )
